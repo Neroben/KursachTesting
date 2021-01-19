@@ -52,6 +52,9 @@ public class LoginTestTest {
         loginPage.inputPassword(ConfProperties.getProperty("password"));
         //нажимаем кнопку входа
         loginPage.clickLoginBtn2();
+        mainPage.closeAdvertising();
+        mainPage.scRight();
+        mainPage.scRight();
         mainPage.entryMenu();
 //        и сравниваем его с логином из файла настроек
         Assert.assertEquals(ConfProperties.getProperty("login"), profilePage.getUsername());
